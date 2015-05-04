@@ -1,0 +1,26 @@
+<section class="container">
+  <div ng-model="contacts">
+	<div style="margin: 15px 15px;">
+    <a href="#/details/{{prevItem}}" class="btn">&lt;</a>
+    <a href="#/details/{{nextItem}}" class="btn">&gt;</a>
+	</div>
+    <h1>{{contacts[whichItem].name.first}} {{contacts[whichItem].name.last}}, {{contacts[whichItem].age}}</h1>
+    <div>
+      <h3>{{contacts[whichItem].company}}</h3>
+      <img class="materialboxed" ng-src="{{contacts[whichItem].picture.large}}" alt="Photo of {{contacts[whichItem].name}}">
+			<p></p>
+			<div><i class="mdi-maps-my-location"></i> {{contacts[whichItem].address}}</div>
+			<div><i class="mdi-communication-email"></i> {{contacts[whichItem].email}}</div>
+			<div><i class="mdi-hardware-phone-android"></i> {{contacts[whichItem].phone}}</div>
+      <div><i class="mdi-action-info"></i>  {{contacts[whichItem].about}}</div>
+			<p></p>
+			<div>					 
+      		<map center="{{contacts[whichItem].latitude}},{{contacts[whichItem].longitude}}" zoom="10"  pan-control="false" scale-control="true"
+					styles="[{stylers:[{hue:'#002654'},{visibility:'simplified'},{gamma:0.5},{weight:0.5}]},{elementType:'labels',stylers[{visibility:'on'}]},{featureType:'water',stylers:[{color:'#002654'}]}]">
+        	<marker position="{{contacts[whichItem].latitude}},{{contacts[whichItem].longitude}}" title="{{item.address}}"></marker>
+     			</map>
+    	</div>
+    </div>
+  </div>
+  <a href="index.html">&laquo; Back to search</a>
+</section>

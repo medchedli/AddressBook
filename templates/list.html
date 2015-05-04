@@ -1,0 +1,67 @@
+<section>
+	<!--<div>
+    <label>search: </label>
+    <input ng-model="query" placeholder="Search for contacts" autofocus>
+
+    <label>by:
+      <select ng-model="contactOrder">
+        <option value="name">Name</option>
+        <option value="reknown">Reknown</option>
+      </select>
+    </label>
+
+    <label>
+      <input type="radio" ng-model="direction" name="direction" checked>
+      ascending
+     </label>
+    <label>
+      <input type="radio" ng-model="direction" name="direction" value="reverse">
+      descending
+    </label>
+		
+  </div>-->
+	  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="mdi-action-account-circle prefix"></i>
+          <input id="icon_prefix" type="text" class="validate" ng-model="query">
+          <label for="icon_prefix">Filtre Contacts</label>
+        </div>
+      </div>
+		<div class="input-field row">
+    <select>
+      <option value="" disabled selected>Choose your option</option>
+      <option value="name">Name</option>
+      <option value="gender">Gender</option>
+    </select>
+    <label>OrderBy</label>
+  </div>
+    </form>
+  </div>
+	<!-- Cards Space-->
+  <ul>
+    <li ng-animate="'animate'" ng-repeat="item in contacts | filter: query | orderBy: contactOrder:direction">
+      <a href="#/details/{{contacts.indexOf(item)}}">
+					<div class="center" >
+						<div class="col s12 m7">
+							<div class="card">
+								<div class="card-image">
+									<img ng-src="{{item.picture.large}}" alt="Photo of {{item.name}}">
+									<span style="font-size:35pt;text-shadow: 2px 2px #002654;"class="card-title">{{item.name.first+' '+item.name.last}}</span>
+								</div>
+								<div class="card-content">
+									<p>{{item.company}}</p>
+								</div>
+								<div class="card-action">
+									<a href="tel:">{{item.phone}}</a>
+									<a href='mailto:'>{{item.email}}</a>
+								</div>
+							</div>
+						</div>
+					</div>
+        </div>
+      </a>
+    </li>
+  </ul>  
+</section>

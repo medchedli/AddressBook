@@ -1,0 +1,16 @@
+/* {list-style-type:none;}*/
+#logo{ margin-left: 20px}
+.contact.ng-enter.ng-enter-active,
+.contact.ng-leave {
+  opacity: 1;
+  height: 80px;
+  overflow: hidden;
+}
+
+.contact.ng-leave.ng-leave-active,
+.contact.ng-enter {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+*/

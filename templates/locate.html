@@ -1,0 +1,16 @@
+<div>
+	<form action="#">
+		<label>Select Range</label>
+    <p class="range-field">
+      <input type="range" id="dist" min="1" max="30" />
+    </p>
+  </form>
+</div>
+<div class="btn orange accent-3" onclick="calculRoute">Find Friends</div>
+<p></p>
+<div class="row">
+      <map center="current-location" zoom="15"
+			styles="[{stylers:[{hue:'#fcd116'},{visibility:'simplified'},{gamma:0.5},{weight:0.5}]},{elementType:'labels',stylers:[{visibility:'on'}]},{featureType:'water',stylers:[{color:'#fcd116'}]}]">        
+				<marker position="current-location" title="You are Here"></marker>
+      </map>
+</div>

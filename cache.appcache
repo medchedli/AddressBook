@@ -1,0 +1,16 @@
+CACHE MANIFEST
+# Version 0.1
+
+index.html
+templates/list.html
+templates/details.html
+templates/locate.html
+templates/form.html
+css/style.css
+js/controllers.js
+js/app.js
+data/data.json
+NETWORK:
+*
+
+FALLBACK:
