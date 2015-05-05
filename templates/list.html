@@ -43,8 +43,8 @@
   <ul>
     <li ng-animate="'animate'" ng-repeat="item in contacts | filter: query | orderBy: contactOrder:direction">
       <a href="#/details/{{contacts.indexOf(item)}}">
-					<div class="center" >
-						<div class="col s12 m7">
+					<div class="row" >
+						<div class="col s3 offset-s6">
 							<div class="card">
 								<div class="card-image">
 									<img ng-src="{{item.picture.large}}" alt="Photo of {{item.name}}">
