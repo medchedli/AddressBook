@@ -1,1 +1,37 @@
-form
+<div class="row">
+    <form class="col s12" ng-submit="submitForm()" ng-controller="FormController">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="	" id="first_name" type="text" class="validate" ng-model="fields.name.first">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate" ng-model="fields.name.last">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="adresse" type="text" class="validate" ng-model="fields.address">
+          <label for="adresse">Adresse</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate" ng-model="fields.email">
+          <label for="email">Email</label>
+        </div>
+      </div>
+	<div class="row">
+        <div class="input-field col s12">
+          <textarea id="about" class="materialize-textarea" length="175" ng-model="fields.about"></textarea>
+          <label for="about">About</label>
+        </div>
+      </div>	
+	<button class="btn waves-effect waves-light " type="submit" name="action">Add Contact
+    	<i class="mdi-content-send right"></i>
+  	</button>
+        
+    </form>
+  </div>
+
